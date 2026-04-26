@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Do Abismo ao Propósito — A Trilogia + O Sistema de Aplicação de J.C. Dias para quem perdeu tudo e está pronto para reconstruir. Preço de lançamento R$297.">
+<meta name="author" content="J.C. Dias">
+<meta property="og:title" content="Do Abismo ao Propósito — J.C. Dias">
+<meta property="og:description" content="A Trilogia + O Sistema de Aplicação. Para quem perdeu tudo e está pronto para reconstruir de dentro para fora.">
+<meta property="og:image" content="https://doabismoaoproposito.jcdias.com/assets/stacks/product_stack_main.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<title>Do Abismo ao Propósito — J.C. Dias</title>
+
+<link rel="icon" type="image/png" href="assets/brand/logo-chama.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://player.vimeo.com">
+<link rel="preconnect" href="https://f.vimeocdn.com">
+<link rel="preload" as="image" href="assets/brand/vsl-thumbnail.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A84C;--gold2:#E8C97A;
+  --dark:#0E0C09;--dark2:#1A1712;--dark3:#252118;
+  --cream:#F5F0E8;--cream2:#EDE8DD;
+  --text:#2C2820;--muted:#7A6E62;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --max:960px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--text);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+
+/* NAV */
+.nav{background:var(--dark);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(201,168,76,0.12)}
+.nav-logo{height:72px;width:auto;display:block}
+.nav-cta{background:var(--gold);color:var(--dark);font-weight:700;font-size:13px;padding:12px 28px;border-radius:2px;text-decoration:none;letter-spacing:0.5px;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:var(--gold2)}
+@media(max-width:600px){.nav{padding:10px 20px}.nav-logo{height:56px}.nav-cta{display:none}}
+
+/* HERO */
+.hero{background:var(--dark);padding:80px 24px 0;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,0.10) 0%,transparent 65%);pointer-events:none}
+.hi{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+.hero-eye{font-size:11px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:block}
+.hero h1{font-family:var(--serif);font-size:clamp(38px,6.5vw,74px);font-weight:700;line-height:1.03;color:#fff;margin-bottom:28px}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hero-sub{font-size:clamp(17px,2.2vw,21px);color:rgba(245,240,232,0.68);max-width:620px;margin:0 auto 40px;font-weight:300;line-height:1.6}
+.hero-sub strong{color:#fff;font-weight:500}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--dark);font-weight:700;font-size:17px;padding:22px 56px;border-radius:2px;text-decoration:none;letter-spacing:0.5px;transition:background .2s,transform .2s}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.hero-hint{font-size:13px;color:rgba(245,240,232,0.28);font-style:italic;padding-bottom:56px;margin-top:14px}
+
+/* VSL */
+.vsl-s{background:var(--dark);padding:0 24px 80px}
+.vsl-wrap{max-width:780px;margin:0 auto}
+.vsl-lbl{text-align:center;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(201,168,76,0.5);margin-bottom:16px}
+.vsl-box{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:3px;border:1px solid rgba(201,168,76,0.18);cursor:pointer}
+.vsl-box iframe{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;pointer-events:none;transition:opacity .3s}
+.vsl-ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background-image:url('assets/brand/vsl-thumbnail.jpg');background-size:cover;background-position:center;transition:opacity .3s}
+.vsl-ov::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.1);pointer-events:none;transition:background .2s}
+.vsl-box:hover .vsl-ov::after{background:rgba(0,0,0,0)}
+.vsl-cap{text-align:center;margin-top:16px;font-size:13px;color:rgba(245,240,232,0.35);font-style:italic}
+
+/* PROOF */
+.proof{background:var(--dark2);padding:18px 24px;text-align:center;font-size:13px;color:rgba(245,240,232,0.45);letter-spacing:0.3px;border-top:1px solid rgba(201,168,76,0.08);border-bottom:1px solid rgba(201,168,76,0.08)}
+.proof strong{color:var(--gold)}
+
+/* SECTIONS */
+.s{padding:96px 24px}
+.inn{max-width:var(--max);margin:0 auto}
+.s-lbl{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
+.s-lbl.dk{color:var(--muted)}
+h2{font-family:var(--serif);font-size:clamp(34px,5vw,56px);font-weight:700;line-height:1.05;margin-bottom:20px}
+h2 em{font-style:italic;color:var(--gold)}
+h2.w{color:#fff}
+h2.w em{color:var(--gold2)}
+.lead{font-size:19px;line-height:1.65;color:var(--muted);font-weight:300}
+.lead.w{color:rgba(245,240,232,0.62)}
+
+/* DOR */
+.dor-s{background:var(--dark);padding:96px 24px}
+.dor-intro{text-align:center;max-width:680px;margin:0 auto 56px}
+.dor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(201,168,76,0.12)}
+@media(max-width:700px){.dor-grid{grid-template-columns:1fr}}
+.dor-item{background:rgba(26,23,18,0.98);padding:40px 32px;position:relative;transition:background .25s}
+.dor-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--gold),transparent);opacity:0;transition:opacity .25s}
+.dor-item:hover{background:rgba(37,33,24,1)}
+.dor-item:hover::before{opacity:1}
+.dor-mark{font-family:var(--serif);font-size:56px;color:rgba(201,168,76,0.35);line-height:1;display:block;margin-bottom:8px}
+.dor-q{font-family:var(--serif);font-size:20px;font-style:italic;line-height:1.45;color:rgba(245,240,232,0.95);font-weight:400}
+
+/* LIVROS SECTION */
+.books-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;max-width:720px;margin-left:auto;margin-right:auto}
+@media(max-width:600px){.books-row{grid-template-columns:1fr;max-width:280px}}
+.book-wrap{text-align:center}
+.book-wrap img{width:100%;max-width:220px;border-radius:3px;box-shadow:0 20px 60px rgba(0,0,0,0.6);transition:transform .3s, box-shadow .3s;margin:0 auto}
+.book-wrap:hover img{transform:translateY(-8px);box-shadow:0 32px 80px rgba(0,0,0,0.7)}
+.book-wrap.mid img{transform:scale(1.06);box-shadow:0 28px 72px rgba(0,0,0,0.65)}
+.book-wrap.mid:hover img{transform:scale(1.06) translateY(-8px)}
+.book-lbl{font-family:var(--serif);font-size:14px;font-style:italic;color:rgba(245,240,232,0.5);margin-top:14px}
+
+/* AUTHOR SECTION */
+.au-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:center}
+@media(max-width:768px){.au-grid{grid-template-columns:1fr;gap:36px;text-align:center}}
+.au-img{width:100%;max-width:320px;border-radius:3px;box-shadow:0 20px 60px rgba(0,0,0,0.4);margin:0 auto}
+.au-name{font-family:var(--serif);font-size:clamp(36px,5vw,52px);font-weight:700;color:#fff;line-height:1.05;margin-bottom:8px}
+.au-role{font-size:13px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;display:block}
+.au-text p{color:rgba(245,240,232,0.72);margin-bottom:16px;line-height:1.7}
+.au-text p em{color:var(--gold2);font-style:italic}
+.bq{margin-top:32px;padding:20px 28px;border-left:2px solid var(--gold);background:rgba(201,168,76,0.05)}
+.bq p{font-family:var(--serif);font-style:italic;color:#fff;font-size:19px;line-height:1.5;margin:0}
+
+/* SISTEMA - NEW VERSION WITH REAL COVER IMAGES */
+.sis-s{background:var(--dark);padding:96px 24px}
+.sis-head{text-align:center;max-width:680px;margin:0 auto 56px}
+
+/* Stack hero removido */
+
+/* New product grid — cover-driven layout */
+.sis-group{margin-top:72px}
+.sis-group-head{text-align:center;margin-bottom:40px}
+.sis-group-lbl{font-family:var(--serif);font-size:28px;font-style:italic;color:var(--gold);letter-spacing:6px;text-transform:uppercase;display:inline-block;position:relative;padding:0 32px}
+.sis-group-lbl::before,.sis-group-lbl::after{content:'';position:absolute;top:50%;width:60px;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0.4}
+.sis-group-lbl::before{right:100%}.sis-group-lbl::after{left:100%}
+.sis-group-sub{font-family:var(--serif);font-size:17px;font-style:italic;color:rgba(245,240,232,0.55);margin-top:12px}
+
+.trio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:780px;margin:0 auto}
+@media(max-width:680px){.trio-grid{grid-template-columns:1fr;max-width:280px}}
+
+.pb{text-align:center}
+.pb-img-wrap{position:relative;margin-bottom:20px;display:flex;justify-content:center}
+.pb-img{width:100%;max-width:200px;height:auto;border-radius:3px;box-shadow:0 20px 60px rgba(0,0,0,0.6);transition:transform .3s, box-shadow .3s;display:block}
+.pb:hover .pb-img{transform:translateY(-6px);box-shadow:0 28px 72px rgba(0,0,0,0.7)}
+.pb-num{font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:4px;text-transform:uppercase;margin-bottom:6px;font-style:italic}
+.pb-title{font-family:var(--serif);font-size:19px;font-style:italic;color:#fff;line-height:1.3;font-weight:600;margin-bottom:6px}
+.pb-sub{font-size:12px;color:rgba(245,240,232,0.45);letter-spacing:1px;text-transform:uppercase}
+
+/* System (6 digitals) — smaller display cards */
+.sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;max-width:900px;margin:0 auto}
+@media(max-width:760px){.sys-grid{grid-template-columns:repeat(2,1fr);gap:24px}}
+@media(max-width:480px){.sys-grid{grid-template-columns:1fr;max-width:280px}}
+
+.pdc{text-align:center;display:flex;flex-direction:column}
+.pdc-img-wrap{display:flex;justify-content:center;margin-bottom:0}
+.pdc-img{width:100%;max-width:220px;height:auto;border-radius:3px;box-shadow:0 16px 48px rgba(0,0,0,0.55);transition:transform .3s, box-shadow .3s;display:block;aspect-ratio:2/3;object-fit:cover}
+.pdc:hover .pdc-img{transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,0.7)}
+.pdc-body{padding-top:20px}
+.pdc-num{font-family:var(--serif);font-size:12px;color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-style:italic;margin-bottom:6px}
+.pdc-t{font-family:var(--serif);font-size:20px;color:#fff;font-weight:600;line-height:1.25;margin-bottom:8px}
+.pdc-t em{color:var(--gold2);font-style:italic}
+.pdc-desc{font-size:13px;color:rgba(245,240,232,0.55);line-height:1.5;margin-top:4px;max-width:260px;margin-left:auto;margin-right:auto}
+.pdc-val{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:2px;color:rgba(201,168,76,0.6);padding:4px 12px;border:1px solid rgba(201,168,76,0.3);border-radius:1px}
+
+/* PRICE */
+.price-s{background:linear-gradient(180deg,var(--dark) 0%,var(--dark2) 100%);padding:96px 24px;color:#fff}
+.p-inner{max-width:680px;margin:0 auto}
+.p-mission{color:rgba(245,240,232,0.72);font-size:17px;line-height:1.75;margin-bottom:44px;font-weight:300;text-align:center}
+.p-box{background:rgba(14,12,9,0.6);border:1px solid rgba(201,168,76,0.2);border-radius:3px;padding:44px 36px;text-align:center;position:relative;overflow:hidden}
+.p-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+.p-total-lbl{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(245,240,232,0.5);display:block;margin-bottom:6px}
+.p-total{font-size:28px;color:rgba(245,240,232,0.5);text-decoration:line-through;text-decoration-color:rgba(201,168,76,0.5);margin-bottom:24px}
+.p-div{width:80px;height:1px;background:rgba(201,168,76,0.4);margin:0 auto 24px}
+.p-launch{font-size:13px;letter-spacing:2px;color:var(--gold);margin-bottom:8px;display:block;font-weight:500}
+.p-big{font-family:var(--serif);font-size:96px;font-weight:700;color:#fff;line-height:1;margin-bottom:6px}
+.p-big sup{font-size:32px;color:var(--gold);vertical-align:super;margin-right:4px}
+.p-inst{font-size:14px;color:rgba(245,240,232,0.55);margin-bottom:32px}
+.btn-cta{display:block;background:var(--gold);color:var(--dark);font-weight:700;font-size:18px;padding:22px 40px;border-radius:2px;text-decoration:none;letter-spacing:0.5px;margin:0 auto 20px;max-width:520px;transition:background .2s,transform .2s}
+.btn-cta:hover{background:var(--gold2);transform:translateY(-2px)}
+.p-guar{font-size:13px;color:rgba(245,240,232,0.5);line-height:1.5}
+.p-guar strong{color:var(--gold2);font-weight:600}
+
+/* CTA stack (removed — stack appears only once in sistema section) */
+
+/* TESTIMONIALS */
+.t-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
+@media(max-width:700px){.t-grid{grid-template-columns:1fr}}
+.tc{background:var(--cream2);padding:28px 32px;border-radius:3px;border-left:3px solid var(--gold)}
+.tc-h{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.tc-ph{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(201,168,76,0.3)}
+.tc-n{font-weight:600;font-size:15px;color:var(--text);margin:0}
+.tc-l{font-size:12px;color:var(--muted);margin:0}
+.tc-stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:12px}
+.tc-txt{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.5;color:#3a342a;margin:0}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:1px;margin-top:48px;background:rgba(201,168,76,0.15)}
+.fi{background:var(--cream);padding:24px 28px;transition:background .2s}
+.fi:hover{background:var(--cream2)}
+.fi-q{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--text);margin-bottom:10px;line-height:1.3}
+.fi-a{color:var(--muted);line-height:1.65;font-size:16px;margin:0}
+
+/* FINAL CTA */
+.fc-s{background:var(--dark);padding:120px 24px;text-align:center;position:relative;overflow:hidden}
+.fc-s::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(201,168,76,0.12) 0%,transparent 70%);pointer-events:none}
+.fc-s h2{position:relative;z-index:1}
+.fc-s p{color:rgba(245,240,232,0.62);font-size:19px;max-width:580px;margin:0 auto 40px;position:relative;z-index:1}
+
+/* FOOTER */
+footer{background:var(--dark2);padding:36px 24px;text-align:center;color:rgba(245,240,232,0.35);font-size:13px;line-height:1.8}
+footer a{color:var(--gold);text-decoration:none}
+footer a:hover{color:var(--gold2)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <img class="nav-logo" src="assets/brand/logo-chama.png" alt="J.C. Dias">
+  <a href="#oferta" class="nav-cta">Quero acesso agora →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hi">
+    <span class="hero-eye">A Trilogia + O Sistema de Aplicação · Lançamento</span>
+    <h1>A maior prisão<br>não tem grades.<br><em>Tem vergonha,<br>medo e silêncio.</em></h1>
+    <p class="hero-sub">Este sistema foi construído numa cela na Inglaterra — para quem perdeu tudo e está pronto para <strong>reconstruir de dentro para fora.</strong></p>
+    <a href="#vsl" class="btn-gold" id="hero-cta">▶ Assista minha história</a>
+    <p class="hero-hint">Role para baixo e assista o vídeo antes de continuar</p>
+  </div>
+</section>
+
+<!-- VSL -->
+<section class="vsl-s" id="vsl">
+  <div class="vsl-wrap">
+    <p class="vsl-lbl">Assista antes de continuar</p>
+    <div class="vsl-box" id="vsl-box" onclick="playVSL()">
+      <iframe id="vsl-iframe" src="https://player.vimeo.com/video/1174147499?h=d61f492290&autoplay=0&title=0&byline=0&portrait=0&muted=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      <div class="vsl-ov" id="vsl-ov"></div>
+    </div>
+    <p class="vsl-cap">O relato real de como transformei o isolamento absoluto no começo de uma nova vida — Inglaterra, 2024.</p>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof">
+  <strong>+3.400 brasileiros</strong> já assistiram ao vídeo &nbsp;·&nbsp;
+  <strong>A Trilogia + 6 ferramentas</strong> num único sistema &nbsp;·&nbsp;
+  <strong>Garantia</strong> total de 15 dias &nbsp;·&nbsp;
+  Acesso imediato via Hotmart
+</div>
+
+<!-- DOR -->
+<section class="dor-s">
+  <div class="inn">
+    <div class="dor-intro">
+      <span class="s-lbl">Você está aqui porque...</span>
+      <h2 class="w" style="font-size:clamp(34px,5vw,52px);margin-bottom:16px">Você reconhece<br><em>pelo menos uma</em><br>dessas frases.</h2>
+      <p class="lead w">Não precisa ser todas. Uma já é suficiente para saber que este sistema foi feito para você.</p>
+    </div>
+    <div class="dor-grid">
+      <div class="dor-item">
+        <span class="dor-mark">"</span>
+        <p class="dor-q">Perdi o emprego, o cargo ou a empresa que construí — e não sei mais quem sou sem isso.</p>
+      </div>
+      <div class="dor-item">
+        <span class="dor-mark">"</span>
+        <p class="dor-q">Cometi um erro que envergonha. E a vergonha diz que sou o erro — não que cometi um.</p>
+      </div>
+      <div class="dor-item">
+        <span class="dor-mark">"</span>
+        <p class="dor-q">Levantei da cama todos os dias — mas sem saber para quê.</p>
+      </div>
+      <div class="dor-item">
+        <span class="dor-mark">"</span>
+        <p class="dor-q">Minha família está ao lado. Mas sinto que estou sozinho de um jeito que não consigo explicar.</p>
+      </div>
+      <div class="dor-item">
+        <span class="dor-mark">"</span>
+        <p class="dor-q">Já tentei seguir em frente. Mas o passado não para de gritar.</p>
+      </div>
+      <div class="dor-item">
+        <span class="dor-mark">"</span>
+        <p class="dor-q">Tenho medo de que as pessoas descubram o quanto estou perdido por dentro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTOR -->
+<section class="s" style="background:var(--dark2)">
+  <div class="inn">
+    <div class="au-grid">
+      <div>
+        <span class="s-lbl">Quem fala</span>
+        <h2 class="au-name">J.C. Dias</h2>
+        <span class="au-role">Autor · Diretor Internacional · Inglaterra</span>
+        <div class="au-text">
+          <p>Em janeiro de 2023, sofri um acidente de carro indo para o trabalho às 5h17 da manhã. Em abril de 2024, fui preso na Inglaterra. Fui solto em abril de 2025.</p>
+          <p>Quase um ano dentro de uma cela. Perdi o cargo, a rotina, a presença diária com a minha esposa e os meus filhos. A vergonha que sussurra que você <em>é</em> o erro — não que cometeu um.</p>
+          <p>Não saí de lá igual. Saí com <em>um sistema</em> — construído na escuridão, testado no extremo. Esse sistema é o que entrego agora.</p>
+        </div>
+        <div class="bq">
+          <p>"A liberdade não começa quando a porta se abre. Ela começa quando você para de fugir de si mesmo."</p>
+        </div>
+      </div>
+      <div style="text-align:center">
+        <img class="au-img" src="assets/brand/jc-dias-foto.jpg" alt="J.C. Dias" loading="lazy" width="480" height="318" style="max-width:420px;width:100%;border-radius:3px;box-shadow:0 24px 72px rgba(0,0,0,0.5);object-fit:cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SISTEMA (REWORKED) -->
+<section class="sis-s" id="sistema">
+  <div class="inn">
+    <div class="sis-head">
+      <span class="s-lbl">O que está incluído</span>
+      <h2 class="w">A Trilogia +<br><em>O Sistema de Aplicação.</em></h2>
+      <p class="lead w">Os 3 livros construídos na escuridão — e as 6 ferramentas práticas para aplicar cada princípio no seu dia.</p>
+    </div>
+
+    <!-- Stack composto removido — as secções detalhadas abaixo (Trilogia + Sistema) comunicam melhor -->
+
+    <!-- GRUPO 1: A TRILOGIA -->
+    <div class="sis-group">
+      <div class="sis-group-head">
+        <span class="sis-group-lbl">A Trilogia</span>
+        <p class="sis-group-sub">Os 3 livros escritos numa cela na Inglaterra</p>
+      </div>
+      <div class="trio-grid">
+        <div class="pb">
+          <div class="pb-img-wrap">
+            <img class="pb-img" src="assets/covers/livro01_quando_morri.jpg" alt="Quando Morri Por Dentro" loading="lazy" width="480" height="720">
+          </div>
+          <p class="pb-num">Ato I</p>
+          <p class="pb-title">Quando Morri Por Dentro</p>
+          <p class="pb-sub">A jornada até o cálice escondido</p>
+        </div>
+        <div class="pb">
+          <div class="pb-img-wrap">
+            <img class="pb-img" src="assets/covers/livro02_recomecar.jpg" alt="Recomeçar com Propósito" loading="lazy" width="480" height="720">
+          </div>
+          <p class="pb-num">Ato II</p>
+          <p class="pb-title">Recomeçar com Propósito</p>
+          <p class="pb-sub">Uma jornada da queda à missão</p>
+        </div>
+        <div class="pb">
+          <div class="pb-img-wrap">
+            <img class="pb-img" src="assets/covers/livro03_de_volta.jpg" alt="De Volta Para o Nada" loading="lazy" width="480" height="720">
+          </div>
+          <p class="pb-num">Ato III</p>
+          <p class="pb-title">De Volta Para o Nada</p>
+          <p class="pb-sub">Quando a esperança cruza fronteiras</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRUPO 2: O SISTEMA DE APLICAÇÃO -->
+    <div class="sis-group">
+      <div class="sis-group-head">
+        <span class="sis-group-lbl">O Sistema de Aplicação</span>
+        <p class="sis-group-sub">6 ferramentas práticas que transformam leitura em reconstrução real</p>
+      </div>
+      <div class="sys-grid">
+        <div class="pdc">
+          <div class="pdc-img-wrap"><img class="pdc-img" src="assets/covers/p04.jpg" alt="Guia de Emergência 72 Horas" loading="lazy" width="800" height="1200"></div>
+          <div class="pdc-body">
+            <p class="pdc-num">Ato IV</p>
+            <h3 class="pdc-t">Guia de <em>Emergência 72h</em></h3>
+            <p class="pdc-desc">O que fazer quando tudo desmorona. Protocolo de ação imediata, dividido em 3 blocos de 24 horas.</p>
+            <span class="pdc-val">Valor R$97</span>
+          </div>
+        </div>
+        <div class="pdc">
+          <div class="pdc-img-wrap"><img class="pdc-img" src="assets/covers/p05.jpg" alt="Diário de Reconstrução 21 Dias" loading="lazy" width="800" height="1200"></div>
+          <div class="pdc-body">
+            <p class="pdc-num">Ato V</p>
+            <h3 class="pdc-t">Diário de <em>Reconstrução</em></h3>
+            <p class="pdc-desc">Sair da paralisia em 21 dias. Uma pergunta e uma ação por dia — onde a transformação prática acontece.</p>
+            <span class="pdc-val">Valor R$67</span>
+          </div>
+        </div>
+        <div class="pdc">
+          <div class="pdc-img-wrap"><img class="pdc-img" src="assets/covers/p06.jpg" alt="Manual do Perdão 7 Passos" loading="lazy" width="800" height="1200"></div>
+          <div class="pdc-body">
+            <p class="pdc-num">Ato VI</p>
+            <h3 class="pdc-t">Manual do <em>Perdão</em></h3>
+            <p class="pdc-desc">7 passos para libertar-se do que você não consegue mudar. Inclui o Ritual do Fogo.</p>
+            <span class="pdc-val">Valor R$87</span>
+          </div>
+        </div>
+        <div class="pdc">
+          <div class="pdc-img-wrap"><img class="pdc-img" src="assets/covers/p07.jpg" alt="Mapa da Identidade" loading="lazy" width="800" height="1200"></div>
+          <div class="pdc-body">
+            <p class="pdc-num">Ato VII</p>
+            <h3 class="pdc-t">Mapa da <em>Identidade</em></h3>
+            <p class="pdc-desc">Quem sou eu depois da queda? 5 camadas e 4 quadrantes para reconstruir o seu eu.</p>
+            <span class="pdc-val">Valor R$97</span>
+          </div>
+        </div>
+        <div class="pdc">
+          <div class="pdc-img-wrap"><img class="pdc-img" src="assets/covers/p08.jpg" alt="Os 5 Princípios da Cela" loading="lazy" width="800" height="1200"></div>
+          <div class="pdc-body">
+            <p class="pdc-num">Ato VIII · Áudio 60min</p>
+            <h3 class="pdc-t">Os 5 Princípios <em>da Cela</em></h3>
+            <p class="pdc-desc">Aceitação, Presença, Gratidão, Perdão, Propósito. 60 minutos que mudam o ângulo de tudo.</p>
+            <span class="pdc-val">Valor R$127</span>
+          </div>
+        </div>
+        <div class="pdc">
+          <div class="pdc-img-wrap"><img class="pdc-img" src="assets/covers/p09.jpg" alt="O Que Nunca Publiquei" loading="lazy" width="800" height="1200"></div>
+          <div class="pdc-body">
+            <p class="pdc-num">Ato IX</p>
+            <h3 class="pdc-t">O Que <em>Nunca Publiquei</em></h3>
+            <p class="pdc-desc">Bastidores que ficaram fora dos livros. Verdade nua, exclusivo deste sistema.</p>
+            <span class="pdc-val">Valor R$147</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price-s" id="oferta">
+  <div class="p-inner">
+    <span class="s-lbl" style="display:block;text-align:center;margin-bottom:20px">A proposta</span>
+    <h2 class="w" style="text-align:center;margin-bottom:36px">Eu não vendo livros.<br><em>Eu entrego um caminho.</em></h2>
+    <p class="p-mission">
+      Tudo o que vivi — o acidente, a prisão, a vergonha, o silêncio, a reconstrução — foi para que estas palavras chegassem até você no momento certo.<br><br>
+      Não estou aqui para lucrar com a sua dor. Estou aqui porque esta é a minha missão: usar o que aprendi no lugar mais escuro da minha vida para iluminar o caminho de quem está no mesmo lugar.<br><br>
+      Por isso o preço deste sistema não reflete o seu valor real. Reflete o meu propósito.
+    </p>
+
+    <!-- Price box directly after mission copy - stack already shown in sistema section above -->
+    <div class="p-box">
+      <span class="p-total-lbl">Valor total — Trilogia + Sistema</span>
+      <p class="p-total">R$1.184</p>
+      <div class="p-div"></div>
+      <span class="p-launch">🔥 Preço de lançamento</span>
+      <p class="p-big"><sup>R$</sup>297</p>
+      <p class="p-inst">ou em até 12x de R$27,90</p>
+      <a href="https://pay.hotmart.com/B104131242S?checkoutMode=10" class="btn-cta" id="main-cta">
+        Quero o sistema completo →
+      </a>
+      <p class="p-guar"><strong>Garantia total de 15 dias.</strong> Se não for para você, devolvo 100% sem perguntas.</p>
+    </div>
+    <p style="font-size:12px;color:rgba(245,240,232,0.22);text-align:center;margin-top:20px">Acesso imediato via Hotmart · Pagamento seguro · Disponível em qualquer dispositivo</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="s">
+  <div class="inn">
+    <span class="s-lbl dk">O que dizem quem já tem o sistema</span>
+    <h2>Eles também estavam<br><em>no abismo.</em></h2>
+    <div class="t-grid">
+      <div class="tc">
+        <div class="tc-h">
+          <img class="tc-ph" src="assets/testimonials/ricardo.jpg" alt="Ricardo M." loading="lazy" width="56" height="56">
+          <div><p class="tc-n">Ricardo M.</p><p class="tc-l">São Paulo, SP · 44 anos</p></div>
+        </div>
+        <p class="tc-stars">★★★★★</p>
+        <p class="tc-txt">"Passei dois anos sem conseguir me olhar no espelho depois que perdi minha empresa. O Diário de 21 Dias foi a primeira coisa que me fez acordar com uma razão para o dia."</p>
+      </div>
+      <div class="tc">
+        <div class="tc-h">
+          <img class="tc-ph" src="assets/testimonials/carlos.jpg" alt="Carlos F." loading="lazy" width="56" height="56">
+          <div><p class="tc-n">Carlos F.</p><p class="tc-l">Curitiba, PR · 53 anos</p></div>
+        </div>
+        <p class="tc-stars">★★★★★</p>
+        <p class="tc-txt">"Liguei para o meu filho depois de ler o capítulo sobre saudade. Não falávamos há três anos. Aquela ligação mudou tudo."</p>
+      </div>
+      <div class="tc">
+        <div class="tc-h">
+          <img class="tc-ph" src="assets/testimonials/sandra.jpg" alt="Sandra L." loading="lazy" width="56" height="56">
+          <div><p class="tc-n">Sandra L.</p><p class="tc-l">Campinas, SP · 48 anos</p></div>
+        </div>
+        <p class="tc-stars">★★★★★</p>
+        <p class="tc-txt">"Comprei esperando motivação. Encontrei honestidade profunda sobre o que é recomeçar de verdade — raramente se vê isso."</p>
+      </div>
+      <div class="tc">
+        <div class="tc-h">
+          <img class="tc-ph" src="assets/testimonials/andre.jpg" alt="André S." loading="lazy" width="56" height="56">
+          <div><p class="tc-n">André S.</p><p class="tc-l">Belo Horizonte, MG · 39 anos</p></div>
+        </div>
+        <p class="tc-stars">★★★★★</p>
+        <p class="tc-txt">"Fiz o Ritual do Fogo numa terça-feira às 23h no quintal de casa. Chorei uma hora. Dormi como não dormia há anos."</p>
+      </div>
+      <div class="tc">
+        <div class="tc-h">
+          <img class="tc-ph" src="assets/testimonials/paulo.jpg" alt="Paulo R." loading="lazy" width="56" height="56">
+          <div><p class="tc-n">Paulo R.</p><p class="tc-l">Fortaleza, CE · 41 anos</p></div>
+        </div>
+        <p class="tc-stars">★★★★★</p>
+        <p class="tc-txt">"Estava usando álcool para anestesiar o que não conseguia nomear. O Guia de 72h foram as horas em que parei de me anestesiar e comecei a me ver."</p>
+      </div>
+      <div class="tc">
+        <div class="tc-h">
+          <img class="tc-ph" src="assets/testimonials/fabricio.jpg" alt="Fabrício V." loading="lazy" width="56" height="56">
+          <div><p class="tc-n">Fabrício V.</p><p class="tc-l">Brasília, DF · 31 anos</p></div>
+        </div>
+        <p class="tc-stars">★★★★★</p>
+        <p class="tc-txt">"O capítulo sobre Ashir fez algo em mim que não consigo explicar. A história dele é a nossa — só que nós temos grades invisíveis."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="s" style="background:var(--cream2)">
+  <div class="inn">
+    <span class="s-lbl dk">Perguntas frequentes</span>
+    <h2>Suas dúvidas,<br><em>respondidas.</em></h2>
+    <div class="faq">
+      <div class="fi"><p class="fi-q">Preciso estar numa crise aguda para aproveitar este sistema?</p><p class="fi-a">Não. Serve para quem está em crise agora, mas também para quem saiu da fase mais difícil e quer reconstruir com mais consciência e profundidade.</p></div>
+      <div class="fi"><p class="fi-q">Em quanto tempo recebo os produtos?</p><p class="fi-a">Imediatamente após a compra. Acesso completo via Hotmart. Todos os produtos são digitais — ebooks, PDF interativos, áudio MP3 e guias de acompanhamento.</p></div>
+      <div class="fi"><p class="fi-q">Como funciona a garantia?</p><p class="fi-a">Você tem 15 dias a partir da compra para pedir reembolso total. Sem perguntas, sem burocracia. Processado automaticamente via Hotmart.</p></div>
+      <div class="fi"><p class="fi-q">Por que o preço está tão abaixo do valor total?</p><p class="fi-a">Porque este é o lançamento. E porque a minha missão não é maximizar lucro — é chegar ao maior número possível de pessoas que precisam deste caminho. Quando o sistema estiver validado, o preço vai ao valor real de R$1.184.</p></div>
+      <div class="fi"><p class="fi-q">Este sistema é religioso?</p><p class="fi-a">Tem dimensão espiritual — porque a minha jornada tem. Mas não é de nenhuma religião específica. Os princípios funcionam independentemente de crença.</p></div>
+      <div class="fi"><p class="fi-q">Funciona para quem já leu os 3 livros?</p><p class="fi-a">Sim. A Trilogia é a espinha dorsal; o Sistema de Aplicação é o que transforma leitura em ação — 6 ferramentas práticas que só existem aqui e que multiplicam o que você já leu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="fc-s">
+  <h2 class="w" style="margin-bottom:20px">A sua queda não é<br><em>o fim da sua história.</em></h2>
+  <p>É a página onde a história mais importante começa. E este sistema é o mapa para essa jornada.</p>
+  <a href="https://pay.hotmart.com/B104131242S?checkoutMode=10" class="btn-cta" id="final-cta" style="max-width:400px;margin:0 auto">
+    Quero o sistema completo →
+  </a>
+  <p style="font-size:13px;color:rgba(245,240,232,0.25);margin-top:16px;position:relative;z-index:1">R$297 · Acesso imediato · Garantia de 15 dias</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    © 2026 J.C. Dias · Todos os direitos reservados<br>
+    <a href="https://doabismoaoproposito.jcdias.com">doabismoaoproposito.jcdias.com</a>
+  </p>
+</footer>
+
+<script>
+// Facebook Pixel (placeholder ID — J.C. will replace with real ID on deploy)
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2122287675194601');
+fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'Do Abismo ao Proposito',content_category:'Trilogia+Sistema',currency:'BRL',value:297.00});
+
+// VSL click-to-play
+function playVSL(){
+  var i=document.getElementById('vsl-iframe');
+  var o=document.getElementById('vsl-ov');
+  i.src=i.src.replace('autoplay=0','autoplay=1');
+  i.style.opacity='1';i.style.pointerEvents='auto';
+  o.style.opacity='0';o.style.pointerEvents='none';
+  if(typeof fbq!=='undefined')fbq('trackCustom','VSLPlayed');
+}
+
+// Smooth scroll to VSL from hero CTA
+document.getElementById('hero-cta').addEventListener('click',function(e){
+  e.preventDefault();
+  document.getElementById('vsl').scrollIntoView({behavior:'smooth'});
+});
+
+// Track checkout intent on all CTAs
+function trackCheckout(){
+  if(typeof fbq!=='undefined')fbq('track','InitiateCheckout',{currency:'BRL',value:297.00,content_name:'Do Abismo ao Proposito'});
+}
+document.getElementById('main-cta').addEventListener('click',trackCheckout);
+document.getElementById('final-cta').addEventListener('click',trackCheckout);
+</script>
+</body>
+</html>
