@@ -15,8 +15,8 @@
 <link rel="icon" type="image/png" href="assets/brand/logo-chama.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://player.vimeo.com">
-<link rel="preconnect" href="https://f.vimeocdn.com">
+<!-- Preconnect ao Vimeo para acelerar carregamento quando usuário clica no play -->
+<link rel="dns-prefetch" href="https://player.vimeo.com">
 <link rel="preload" as="image" href="assets/brand/vsl-thumbnail.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
@@ -40,7 +40,22 @@ img{max-width:100%;display:block}
 .nav-logo{height:72px;width:auto;display:block}
 .nav-cta{background:var(--gold);color:var(--dark);font-weight:700;font-size:13px;padding:12px 28px;border-radius:2px;text-decoration:none;letter-spacing:0.5px;white-space:nowrap;transition:background .2s}
 .nav-cta:hover{background:var(--gold2)}
-@media(max-width:600px){.nav{padding:10px 20px}.nav-logo{height:56px}.nav-cta{display:none}}
+@media(max-width:600px){.nav{padding:10px 16px}.nav-logo{height:48px}.nav-cta{font-size:11px;padding:9px 16px;letter-spacing:0.3px}}
+
+/* MOBILE STICKY CTA — sempre visível na base do mobile */
+.mobile-cta-bar{display:none}
+@media(max-width:768px){
+  .mobile-cta-bar{display:block;position:fixed;bottom:0;left:0;right:0;z-index:999;background:linear-gradient(180deg,rgba(14,12,9,0.92) 0%,rgba(14,12,9,0.98) 30%);padding:12px 16px calc(12px + env(safe-area-inset-bottom)) 16px;border-top:1px solid rgba(201,168,76,0.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .mobile-cta-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:var(--dark);font-weight:700;font-size:16px;padding:16px 20px;border-radius:3px;text-decoration:none;letter-spacing:0.3px;width:100%;box-shadow:0 4px 16px rgba(201,168,76,0.3);transition:background .2s,transform .15s}
+  .mobile-cta-btn:active{transform:scale(0.98)}
+  .mobile-cta-btn:hover{background:var(--gold2)}
+  .mobile-cta-price{font-size:11px;color:rgba(245,240,232,0.5);text-align:center;margin-top:6px;letter-spacing:0.5px}
+  .mobile-cta-price strong{color:var(--gold);font-weight:600}
+  /* Adicionar padding extra no body para o botão flutuante não cobrir conteúdo */
+  body{padding-bottom:90px}
+  /* Não mostrar quando estiver no final da página (último CTA) */
+  .mobile-cta-bar.hidden{transform:translateY(100%);transition:transform .3s}
+}
 
 /* HERO */
 .hero{background:var(--dark);padding:80px 24px 0;text-align:center;position:relative;overflow:hidden}
@@ -59,12 +74,15 @@ img{max-width:100%;display:block}
 .vsl-s{background:var(--dark);padding:0 24px 80px}
 .vsl-wrap{max-width:780px;margin:0 auto}
 .vsl-lbl{text-align:center;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(201,168,76,0.5);margin-bottom:16px}
-.vsl-box{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:3px;border:1px solid rgba(201,168,76,0.18);cursor:pointer}
-.vsl-box iframe{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;pointer-events:none;transition:opacity .3s}
+.vsl-box{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:3px;border:1px solid rgba(201,168,76,0.18);cursor:pointer;background:#000}
+.vsl-box iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 .vsl-ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background-image:url('assets/brand/vsl-thumbnail.jpg');background-size:cover;background-position:center;transition:opacity .3s}
-.vsl-ov::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.1);pointer-events:none;transition:background .2s}
-.vsl-box:hover .vsl-ov::after{background:rgba(0,0,0,0)}
+.vsl-ov::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.25);pointer-events:none;transition:background .2s}
+.vsl-box:hover .vsl-ov::after{background:rgba(0,0,0,0.1)}
+.vsl-play-btn{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.vsl-box:hover .vsl-play-btn{transform:scale(1.08)}
 .vsl-cap{text-align:center;margin-top:16px;font-size:13px;color:rgba(245,240,232,0.35);font-style:italic}
+@media(max-width:600px){.vsl-play-btn svg{width:64px;height:64px}}
 
 /* PROOF */
 .proof{background:var(--dark2);padding:18px 24px;text-align:center;font-size:13px;color:rgba(245,240,232,0.45);letter-spacing:0.3px;border-top:1px solid rgba(201,168,76,0.08);border-bottom:1px solid rgba(201,168,76,0.08)}
@@ -229,9 +247,15 @@ footer a:hover{color:var(--gold2)}
 <section class="vsl-s" id="vsl">
   <div class="vsl-wrap">
     <p class="vsl-lbl">Assista antes de continuar</p>
-    <div class="vsl-box" id="vsl-box" onclick="playVSL()">
-      <iframe id="vsl-iframe" src="https://player.vimeo.com/video/1174147499?h=d61f492290&autoplay=0&title=0&byline=0&portrait=0&muted=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      <div class="vsl-ov" id="vsl-ov"></div>
+    <div class="vsl-box" id="vsl-box" onclick="playVSL()" role="button" aria-label="Assistir vídeo">
+      <div class="vsl-ov" id="vsl-ov">
+        <div class="vsl-play-btn" aria-hidden="true">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="38" fill="rgba(0,0,0,0.55)" stroke="#C9A84C" stroke-width="2"/>
+            <path d="M32 26 L32 54 L56 40 Z" fill="#C9A84C"/>
+          </svg>
+        </div>
+      </div>
     </div>
     <p class="vsl-cap">O relato real de como transformei o isolamento absoluto no começo de uma nova vida — Inglaterra, 2024.</p>
   </div>
@@ -537,35 +561,76 @@ footer a:hover{color:var(--gold2)}
   </p>
 </footer>
 
+<!-- MOBILE STICKY CTA — sempre visível ao rolar (apenas em telas ≤768px) -->
+<div class="mobile-cta-bar" id="mobile-cta-bar">
+  <a href="https://pay.hotmart.com/A105558308V?off=n8civpoc" class="mobile-cta-btn">
+    Quero o sistema completo →
+  </a>
+  <p class="mobile-cta-price"><strong>R$297</strong> · 12x R$27,90 · Garantia 15 dias</p>
+</div>
+
 <script>
-// Facebook Pixel (placeholder ID — J.C. will replace with real ID on deploy)
+// Facebook Pixel
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','2122287675194601');
 fbq('track','PageView');
 fbq('track','ViewContent',{content_name:'Do Abismo ao Proposito',content_category:'Trilogia+Sistema',currency:'BRL',value:297.00});
 
-// VSL click-to-play
+// VSL lazy-load — iframe só é criado quando o usuário clica no play
 function playVSL(){
-  var i=document.getElementById('vsl-iframe');
-  var o=document.getElementById('vsl-ov');
-  i.src=i.src.replace('autoplay=0','autoplay=1');
-  i.style.opacity='1';i.style.pointerEvents='auto';
-  o.style.opacity='0';o.style.pointerEvents='none';
+  var box=document.getElementById('vsl-box');
+  var ov=document.getElementById('vsl-ov');
+  // Cria iframe sob demanda (evita carregar Vimeo no load da página)
+  var iframe=document.createElement('iframe');
+  iframe.id='vsl-iframe';
+  iframe.src='https://player.vimeo.com/video/1174147499?h=d61f492290&autoplay=1&title=0&byline=0&portrait=0&muted=0';
+  iframe.setAttribute('allow','autoplay; fullscreen; picture-in-picture');
+  iframe.setAttribute('allowfullscreen','');
+  iframe.setAttribute('frameborder','0');
+  box.appendChild(iframe);
+  // Esconde overlay
+  ov.style.opacity='0';ov.style.pointerEvents='none';
+  // Remove handler de click (já carregou)
+  box.onclick=null;
+  // Track event
   if(typeof fbq!=='undefined')fbq('trackCustom','VSLPlayed');
 }
 
-// Smooth scroll to VSL from hero CTA
-document.getElementById('hero-cta').addEventListener('click',function(e){
-  e.preventDefault();
-  document.getElementById('vsl').scrollIntoView({behavior:'smooth'});
-});
+// Smooth scroll do hero CTA para a VSL
+var heroCta=document.getElementById('hero-cta');
+if(heroCta){
+  heroCta.addEventListener('click',function(e){
+    e.preventDefault();
+    document.getElementById('vsl').scrollIntoView({behavior:'smooth'});
+  });
+}
 
-// Track checkout intent on all CTAs
+// Track InitiateCheckout em todos os CTAs que vão para o Hotmart
 function trackCheckout(){
   if(typeof fbq!=='undefined')fbq('track','InitiateCheckout',{currency:'BRL',value:297.00,content_name:'Do Abismo ao Proposito'});
 }
-document.getElementById('main-cta').addEventListener('click',trackCheckout);
-document.getElementById('final-cta').addEventListener('click',trackCheckout);
+// Loop em todos os links que apontam para pay.hotmart.com
+document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(link){
+  link.addEventListener('click',trackCheckout);
+});
+
+// Mobile CTA bar — esconde quando o usuário chega no CTA final (evita duplicação visual)
+(function(){
+  var mobileCta=document.getElementById('mobile-cta-bar');
+  if(!mobileCta)return;
+  var finalCta=document.getElementById('final-cta');
+  if(!finalCta)return;
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        mobileCta.classList.add('hidden');
+      }else{
+        mobileCta.classList.remove('hidden');
+      }
+    });
+  },{threshold:0.3});
+  observer.observe(finalCta);
+})();
 </script>
 </body>
 </html>
